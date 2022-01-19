@@ -5,7 +5,6 @@ from time import sleep
 while True:
     Interface.menu('Sistema de cadastro', True)
     Interface.menu_opcoes('Ver pessoas cadastradadas.', 'Cadastrar uma nova pessoa.', 'Sair do programa.')
-    sleep(0.8)
     try:
         usuario = int(input(f'{"Sua opção: "}'))
         Interface.linhas(20)

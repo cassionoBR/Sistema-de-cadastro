@@ -2,7 +2,7 @@ def M_arquivo(n='', idade=''):
 
     arquivo = open('Sistema_Dados.txt', 'a+')
     conteudo = arquivo.readlines()
-    conteudo.append(f'\nNome: {n}. \t{idade} anos')
+    conteudo.append(f'\nNome: {n:<33}Idade: {idade:>3} anos')
     
     arquivo = open('Sistema_Dados.txt', 'a')
     arquivo.writelines(conteudo)
