@@ -1,10 +1,10 @@
 def M_arquivo(n='', idade=''): 
 
-    arquivo = open('Dados-desafio115.txt', 'a+')
+    arquivo = open('Sistema_Dados.txt', 'a+')
     conteudo = arquivo.readlines()
     conteudo.append(f'\nNome: {n}. \t{idade} anos')
     
-    arquivo = open('Dados-desafio115.txt', 'a')
+    arquivo = open('Sistema_Dados.txt', 'a')
     arquivo.writelines(conteudo)
     arquivo.close()
 
@@ -26,8 +26,9 @@ def cadastro():
                         
 
 def leia_dados():
-    
-    arquivo = open('Dados-desafio115.txt', 'r')
+    arquivo = open('Sistema_Dados.txt', 'a+')
+    ler = arquivo.readlines()
+    arquivo = open('Sistema_Dados.txt', 'r')
     ler = arquivo.readlines()
     for c in ler:
         print(c, end='')

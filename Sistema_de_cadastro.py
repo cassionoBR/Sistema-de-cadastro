@@ -1,11 +1,11 @@
-from Modulos_exercicios.Modulos_desafio115 import Interface
-from Modulos_exercicios.Modulos_desafio115 import Gerenciador_de_cadastro
+from Biblioteca.Modulos_Projeto import Interface
+from Biblioteca.Modulos_Projeto import Gerenciador_de_cadastro
 from time import sleep
 
 while True:
     Interface.menu('Sistema de cadastro', True)
     Interface.menu_opcoes('Ver pessoas cadastradadas.', 'Cadastrar uma nova pessoa.', 'Sair do programa.')
-    sleep(1.3)
+    sleep(0.8)
     try:
         usuario = int(input(f'{"Sua opção: "}'))
         Interface.linhas(20)
@@ -16,11 +16,14 @@ while True:
         if usuario == 1:
             Interface.menu('Pessoas cadastradas', True)
             Gerenciador_de_cadastro.leia_dados()
+            sleep(1)
         elif usuario == 2:
             Interface.menu('cadastrar nova pessoa', True)
             Gerenciador_de_cadastro.cadastro()
+            sleep(1)
         elif usuario == 3:
             Interface.menu('Até mais! tenha um excelente dia.')
+            sleep(1)
             break
         else:
             Interface.linhas(20)
